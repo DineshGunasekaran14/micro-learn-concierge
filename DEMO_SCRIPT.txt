@@ -1,0 +1,26 @@
+[0:00 — HOOK]
+Imagine wanting to learn advanced topics like Quantum Computing or Machine Learning but feeling completely overwhelmed by massive textbooks and long courses. That is why I built the Micro-Learning Concierge, a personalized educational assistant that delivers curated 5-minute lessons to fit into anyone's busy schedule.
+
+[0:20 — WHAT IT IS]
+This agent is part of the Concierge Agents track. It acts as an automated learning partner: it gathers your goals, designs a structured learning path, delivers a high-impact daily summary, and evaluates your understanding through immediate, gamified quizzes.
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see on the banner, the Micro-Learning Concierge combines custom lessons, interactive quizzes, and visual progress tracking into a clean, modern dashboard built directly on top of the Gemini API.
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's look at the system architecture. The system starts at the Root AI Agent. The Root Agent orchestrates the flow. When a user creates or updates their configuration, the agent invokes the save_user_profile tool to store their goals and schedule. Daily lesson delivery is driven by the search_simulated_kb tool, which queries a structured knowledge index to fetch target content. After reading, the user completes a quiz, and the log_quiz_result tool records the performance metrics. All user preferences and scores are loaded back via the get_user_profile tool.
+
+[2:00 — LIVE DEMO]
+(switch to playground at app/index.html)
+Let's see this in action. (pause)
+First, I will update my preferences. I will choose "Quantum Computing" as my learning topic, set my daily delivery time to 09:00 AM, and click Update Profile. (pause)
+Now, I will request today's lesson. As you can see, the concierge retrieves the introduction to qubits and generates a beautiful, quick-read summary. (pause)
+Let's test my comprehension. I'll select Superposition for Question 1, Spooky action at a distance for Question 2, and Quantum Interference for Question 3. When I click Submit, the dashboard checks my answers in real-time, displays detailed feedback, and records my 3 out of 3 score to my learning history in the left sidebar.
+
+[3:00 — SECURITY & MCP]
+To protect user credentials and ensure robustness, the Python agent defines custom tools with default authentication fallback routines. Furthermore, all progress tracking is stored directly in the local browser state, providing complete privacy and zero data leakage.
+
+[3:30 — IMPACT / CLOSE]
+By transforming learning into bite-sized, interactive daily habits, the Micro-Learning Concierge makes acquiring new skills simple, engaging, and highly effective. Thank you!

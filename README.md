@@ -102,3 +102,13 @@ graph TD
    ```
 
    ⚠ NEVER push .env to GitHub. Your API key will be exposed publicly.
+
+## Assets
+### Cover Page Banner
+![Cover Page Banner](assets/cover_page_banner.png)
+
+### Agent Workflow Diagram
+![Workflow Diagram](assets/architecture_diagram.png)
+
+## Demo Script
+The timed spoken narration script for demonstration is available in [DEMO_SCRIPT.txt](file:///Users/dineshg/Downloads/adk-workspace/micro-learn-concierge/DEMO_SCRIPT.txt).
